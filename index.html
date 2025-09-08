@@ -4,147 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniMercado Popular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Cabeçalho -->
-    <header>
-        <!-- Logo -->
-        <section id="logo">
-            <a href="#">
-                <img src="./assets/logomarca.png" title="MiniMercado Popular" alt="Logo do MiniMercado Popular" style="width: 150px; height: auto;">
-            </a>
-        </section>
-        <!-- Menu de Navegação -->
-        <nav id="navegacao">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="sobre-nos.html">Sobre nós</a></li>
-            </ul>
-        </nav>
+    <header class="p-3 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <section id="logo">
+                <a href="#">
+                    <img src="./assets/logomarca.png" alt="Logo do MiniMercado Popular" class="logo">
+                </a>
+            </section>
+            <!-- Menu de Navegação -->
+            <nav id="navegacao">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-nos.html">Sobre nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
     </header> <!-- Fim do Cabeçalho -->
 
-    <!-- Conteúdo do site -->
-    <main>
+    <!-- Conteúdo da Página -->
+    <main class="container mt-4">
         <!-- Banner -->
-        <section id="banner">
-            <hr/>
-            <h2><mark>Promoção do Mês</mark></h2>
-            <a href="#produtos-desconto">
-                <img src="./assets/promo.png" title="Promoção do Mês" alt="Mês do consumidor: O mês inteiro de super descontos." style="width: 1080px; height: auto;">
-            </a>
-        </section> <!-- Fim do Banner -->
-
+        <div id="carouselPromocoes" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/banner01.png" class="d-block w-100 rounded carousel-image" alt="Mês do consumidor com super descontos.">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/banner02.png" class="d-block w-100 rounded carousel-image" alt="Frutas e verduras frescas todos os dias.">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/banner03.png" class="d-block w-100 rounded carousel-image" alt="Ofertas especiais em produtos diversos.">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocoes" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocoes" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div> <!-- Fim do Banner -->
+        
         <!-- Produtos -->
-        <section id="produtos">
-            <h2><mark>Produtos em destaque</mark></h2>
+        <section id="produtos" class="mt-5">
+            <h2 class="text-center mb-4"><mark>Produtos em destaque</mark></h2>
             <!-- Categoria 1 -->
             <div id="frutas-verduras">
                 <h3>Frutas e Verduras</h3>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="./assets/produto1.png" alt="Cenoura Extra" style="width: 200px; height: auto;">
-                            <p><strong>Cenoura Extra</strong></p>
-                            <p><strong>Descrição:</strong> Cenoura fresca e crocante.</p>
-                            <p><strong>Preço:</strong> R$ 5,99 kg</p>
-                        </td>
-                        <td>
-                            <img src="./assets/produto2.png" alt="Batata Inglesa" style="width: 200px; height: auto;">
-                            <p><strong>Batata Inglesa</strong></p>
-                            <p><strong>Descrição:</strong> Batata inglesa de qualidade.</p>
-                            <p><strong>Preço:</strong> R$ 7,99 kg</p>
-                        </td>
-                    </tr>
-                </table>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="./assets/produto1.png" class="card-img-top product-image" alt="Cenoura Extra">
+                            <div class="card-body">
+                                <h5 class="card-title">Cenoura Extra</h5>
+                                <p class="card-text"><strong>Descrição:</strong> Cenoura fresca e crocante.</p>
+                                <p class="card-text"><strong>Preço:</strong> R$ 5,99 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="./assets/produto2.png" class="card-img-top product-image" alt="Batata Inglesa">
+                            <div class="card-body">
+                                <h5 class="card-title">Batata Inglesa</h5>
+                                <p class="card-text"><strong>Descrição:</strong> Batata inglesa de qualidade.</p>
+                                <p class="card-text"><strong>Preço:</strong> R$ 7,99 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Categoria 2 -->
             <div id="nao-pereciveis">
-                <h3>Não perecíveis</h3>
-                <table>
-                    <tr>
-                        <td>
-                            <img src="./assets/produto3.png" alt="Creme de Leite Nestlé 300g" style="width: 200px; height: auto;">
-                            <p><strong>Creme de Leite Nestlé 300g</strong></p>
-                            <p><strong>Descrição:</strong> Creme de leite de alta qualidade.</p>
-                            <p><strong>Preço:</strong> R$ 7,29</p>
-                        </td>
-                        <td>
-                            <img src="./assets/produto4.png" alt="Nutella Creme de Avelã 350g" style="width: 200px; height: auto;">
-                            <p><strong>Nutella Creme de Avelã 350g</strong></p>
-                            <p><strong>Descrição:</strong> Creme de avelã com cacau.</p>
-                            <p><strong>Preço:</strong> R$ 34,19</p>
-                        </td>
-                    </tr>
-                </table>
+                <h3 class="mt-4">Não perecíveis</h3>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="./assets/produto3.png" class="card-img-top product-image" alt="Creme de Leite Nestlé 300g">
+                            <div class="card-body">
+                                <h5 class="card-title">Creme de Leite Nestlé 300g</h5>
+                                <p class="card-text"><strong>Descrição:</strong> Creme de leite de alta qualidade.</p>
+                                <p class="card-text"><strong>Preço:</strong> R$ 7,29</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="./assets/produto4.png" class="card-img-top product-image" alt="Nutella Creme de Avelã 350g">
+                            <div class="card-body">
+                                <h5 class="card-title">Nutella Creme de Avelã 350g</h5>
+                                <p class="card-text"><strong>Descrição:</strong> Creme de avelã com cacau.</p>
+                                <p class="card-text"><strong>Preço:</strong> R$ 34,19</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Categoria 3 -->
             <div id="higiene-limpeza">
-                <h3>Higiene e Limpeza</h3>
-                <table id="produtos-desconto">
-                    <tr>
-                        <td>
-                            <img src="./assets/produto5.png" alt="Sabão Líquido Omo Lavagem Perfeita 3L" style="width: 200px; height: auto;">
-                            <p><strong>Sabão Líquido Omo Lavagem Perfeita 3L</strong></p>
-                            <p><strong>Descrição:</strong> Sabão líquido para roupas com alta eficiência.</p>
-                            <p><strong>Preço:</strong></p>
-                            <p><small><em>de R$ 35,90</em></small> <small><strong><mark>-45%</mark></strong></small></p>
-                            <p><strong>R$ 19,75</strong></p>
-                        </td>
-                        <td>
-                            <img src="./assets/produto6.png" alt="Água Sanitária Super Candida 5 Litros" style="width: 200px; height: auto;">
-                            <p><strong>Água Sanitária Super Candida 5 Litros</strong></p>
-                            <p><strong>Descrição:</strong> Água sanitária com alta concentração de cloro.</p>
-                            <p><strong>Preço:</strong></p>
-                            <p><small><em>de R$ 11,19</em></small> <small><strong><mark>-25%</mark></strong></small></p>
-                            <p><strong>R$ 8,39</strong></p>
-                        </td>
-                    </tr>
-                </table>
+                <h3 class="mt-4">Higiene e Limpeza</h3>
+                <div id="produtos-desconto" class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="./assets/produto5.png" class="card-img-top product-image" alt="Sabão Líquido Omo Lavagem Perfeita 3L">
+                            <div class="card-body">
+                                <h5 class="card-title">Sabão Líquido Omo 3L</h5>
+                                <p class="card-text"><strong>Descrição:</strong> Sabão líquido para roupas com alta eficiência.</p>
+                                <p class="preco-antigo">de R$ 35,90 <span class="badge bg-danger">-45%</span></p>
+                                <p class="preco-novo">R$ 19,75</p>
+                                <div class="contador-produto text-danger fw-bold mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100 text-center">
+                            <img src="./assets/produto6.png" class="card-img-top product-image" alt="Água Sanitária Super Candida 5 Litros">
+                            <div class="card-body">
+                                <h5 class="card-title">Água Sanitária Candida 5L</h5>
+                                <p class="card-text"><strong>Descrição:</strong> Água sanitária com alta concentração de cloro.</p>
+                                <p class="preco-antigo">de R$ 11,19 <span class="badge bg-danger">-25%</span></p>
+                                <p class="preco-novo">R$ 8,39</p>
+                                <div class="contador-produto text-danger fw-bold mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section> <!-- Fim dos Produtos -->
-
+        
         <!-- Serviços -->
-        <section id="servicos">
-            <h2><mark>Serviços</mark></h2>
+        <section id="servicos" class="mt-5 p-4 bg-light rounded">
+            <h2 class="text-center mb-4"><mark>Serviços</mark></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus finibus consectetur. Cras placerat sem tortor, et rutrum velit lacinia vitae. Integer ac risus aliquet, cursus ipsum sed, ornare augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse diam quam, tempus non felis ac, dictum convallis metus. Suspendisse potenti. Etiam id felis lectus. Maecenas non bibendum sem. Cras et lectus nec eros luctus condimentum at lacinia neque. Maecenas est risus, maximus eget mauris et, vulputate fermentum arcu. Integer lobortis, quam non vehicula luctus, neque enim elementum sapien, nec facilisis eros mi elementum quam</p>
-            <dl id="retirada">
-                <dt><h3>Retirada no local</h3></dt>
-                    <dd>Faça seu pedido online e retire na loja com rapidez e segurança.</dd>
-                    <dd><strong>Preço:</strong> R$ 0,00</dd>
-                    <dd><p><a href="mailto:contato@minimercadopopular.com?subject=Irei retirar meu pedido!&body=Olá, gostaria de agendar a retirada do meu pedido.">Agendar retirada!</a></p></dd>
-            </dl>
-            <dl id="entrega">
-                <dt><h3>Entrega a domicílio</h3></dt>
-                    <dd>Receba seus produtos no conforto da sua casa.</dd>
-                    <dd><strong>Preço:</strong> R$ 10,00</dd>
-                    <dd><p><a href="mailto:contato@minimercadopopular.com?subject=Irei receber meu pedido em casa!&body=Olá, gostaria de agendar a entrega do meu pedido em casa.">Agendar entrega!</a></p></dd>
-            </dl>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <h3>Retirada no local</h3>
+                    <p>Faça seu pedido online e retire na loja com rapidez e segurança.</p>
+                    <p><strong>Preço:</strong> Gratuito</p>
+                    <a href="cadastro.html?servico=retirada" class="btn btn-primary">Agendar retirada!</a>
+                </div>
+                <div class="col-md-6">
+                    <h3>Entrega a domicílio</h3>
+                    <p>Receba seus produtos no conforto da sua casa.</p>
+                    <p><strong>Preço:</strong> R$ 10,00</p>
+                    <a href="cadastro.html?servico=entrega" class="btn btn-primary">Agendar entrega!</a>
+                </div>
+            </div>
         </section> <!-- Fim dos Serviços -->
-    </main> <!-- Fim do Conteúdo do site -->
+    </main> <!-- Fim do Conteúdo da Página -->
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="container-fluid bg-dark text-white mt-5">
         <!-- Logo do Rodapé -->
-        <div id="logo-rodape">
-            <hr/>
-            <a href="#logo">
-                <img src="./assets/logomarca.png" title="MiniMercado Popular" alt="MiniMercado Popular" style="display: block; margin: 0 auto; width: 150px; height: auto;">
-            </a>
-        </div>
-        <!-- Dados de Contato -->
-        <div id="contato" style="text-align: center;">
-            <p><strong>Endereço:</strong> Avenida Doutor Pompílio Mercadante, 398 - Centro - Jacareí/SP - 12308-510</p>
-            <p><strong>Telefone:</strong> <a href="tel:12988573742">(12) 98857-3742</a></p>
-            <p><strong>Email:</strong> <a href="mailto:luiz.paiva@outlook.com.br">luiz.paiva@outlook.com.br</a></p>
-        </div>
-        <!-- Direitos Autorais -->
-        <div id="direitos-autorais" style="text-align: center;">
-            <hr/>
-            <p><strong>&copy; 2025 MiniMercado Popular</strong>. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <strong><a href="https://github.com/paivaluiz">Luiz Carlos de Paiva Júnior</a></strong></p>
+        <div class="container text-center p-4">
+            <div id="logo-rodape">
+                <a href="#logo">
+                    <img src="./assets/logomarca.png" alt="MiniMercado Popular" class="logo mb-3">
+                </a>
+            </div>
+            <!-- Dados de Contato -->
+            <div id="contato">
+                <p><strong>Endereço:</strong> Avenida Doutor Pompílio Mercadante, 398 - Centro - Jacareí/SP - 12308-510</p>
+                <p><strong>Telefone:</strong> <a href="tel:12988573742">(12) 98857-3742</a> | <strong>Email:</strong> <a href="mailto:luiz.paiva@outlook.com.br">luiz.paiva@outlook.com.br</a></p>
+            </div>
+            <!-- Direitos Autorais -->
+            <div id="direitos-autorais">
+                <hr/>
+                <p>&copy; 2025 MiniMercado Popular. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://github.com/paivaluiz">Luiz Carlos de Paiva Júnior</a></p>
+            </div>
         </div>
     </footer> <!-- Fim do Rodapé -->
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -4,78 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - MiniMercado Popular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Cabeçalho -->
-    <header>
-        <!-- Logo -->
-        <section id="logo">
+    <header class="bg-light p-3 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
             <a href="index.html">
-                <img src="./assets/logomarca.png" title="MiniMercado Popular" alt="Logo do MiniMercado Popular" style="width: 150px; height: auto;">
+                <img src="./assets/logomarca.png" alt="Logo do MiniMercado Popular" class="logo">
             </a>
-        </section>
-        <!--Menu de Navegação-->
-        <nav id="navegacao">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#produtos">Produtos</a></li>
-                <li><a href="index.html#servicos">Serviços</a></li>
-                <li><a href="#">Sobre nós</a></li>
-            </ul>
-        </nav>
+            <!--Menu de Navegação-->
+            <nav id="navegacao">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Sobre nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
     </header> <!-- Fim do Cabeçalho -->
-
-    <!-- Conteúdo da página "Sobre Nós" -->
-    <main>
+    <!-- Conteúdo da Página "Sobre Nós" -->
+    <main class="container mt-4">
         <section id="sobre">
-            <hr/>
             <h1>Sobre o MiniMercado Popular</h1>
+            <hr>
             
             <h2>Nossa História</h2>
             <p>Fundado em 2020, o MiniMercado Popular nasceu do sonho de uma família de oferecer produtos de qualidade com preço justo para a comunidade local. Começamos pequenos, mas com um grande coração e o desejo de servir bem a todos os nossos vizinhos.</p>
 
-            <h2>Missão, Visão e Valores</h2>
+            <h2 class="mt-4">Missão, Visão e Valores</h2>
             <dl>
                 <dt><strong>Missão</strong></dt>
                 <dd>Facilitar o dia a dia dos nossos clientes, oferecendo uma variedade de produtos essenciais com atendimento amigável e preços acessíveis.</dd>
-                <br>
-                <dt><strong>Visão</strong></dt>
+                
+                <dt class="mt-3"><strong>Visão</strong></dt>
                 <dd>Ser o minimercado de referência no bairro, reconhecido pela qualidade, confiança e pelo carinho no atendimento.</dd>
-                <br>
-                <dt><strong>Valores</strong></dt>
+                
+                <dt class="mt-3"><strong>Valores</strong></dt>
                 <dd>
-                    <ul>
-                        <li>Respeito ao cliente</li>
-                        <li>Qualidade dos produtos</li>
-                        <li>Honestidade e transparência</li>
-                        <li>Compromisso com a comunidade</li>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill"></i> Respeito ao cliente</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Qualidade dos produtos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Honestidade e transparência</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Compromisso com a comunidade</li>
                     </ul>
                 </dd>
             </dl>
         </section> <!-- Fim da Seção Sobre -->
-    </main> <!-- Fim do Conteúdo da página -->
-
-    <!-- Rodapé -->
-    <footer>
-        <!-- Logo do Rodapé -->
-        <div id="logo-rodape">
-            <hr/>
-            <a href="#logo">
-                <img src="./assets/logomarca.png" title="MiniMercado Popular" alt="MiniMercado Popular" style="display: block; margin: 0 auto; width: 150px; height: auto;">
-            </a>
-        </div>
-        <!-- Dados de Contato -->
-        <div id="contato" style="text-align: center;">
-            <p><strong>Endereço:</strong> Avenida Doutor Pompílio Mercadante, 398 - Centro - Jacareí/SP - 12308-510</p>
-            <p><strong>Telefone:</strong> <a href="tel:12988573742">(12) 98857-3742</a></p>
-            <p><strong>Email:</strong> <a href="mailto:luiz.paiva@outlook.com.br">luiz.paiva@outlook.com.br</a></p>
-        </div>
-        <!-- Direitos Autorais -->
-        <div id="direitos-autorais" style="text-align: center;">
-            <hr/>
-            <p><strong>&copy; 2025 MiniMercado Popular</strong>. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <strong><a href="https://github.com/paivaluiz">Luiz Carlos de Paiva Júnior</a></strong></p>
+     </main> <!-- Fim do Conteúdo da página -->
+     
+     <!-- Rodapé -->
+     <footer class="container-fluid bg-dark text-white mt-5">
+        <div class="container text-center p-4">
+            <img src="./assets/logomarca.png" alt="MiniMercado Popular" class="logo mb-3">
+            <!-- Dados de Contato -->
+            <div id="contato">
+                <p><strong>Endereço:</strong> Avenida Doutor Pompílio Mercadante, 398 - Centro - Jacareí/SP - 12308-510</p>
+                <p><strong>Telefone:</strong> <a href="tel:12988573742">(12) 98857-3742</a> | <strong>Email:</strong> <a href="mailto:luiz.paiva@outlook.com.br">luiz.paiva@outlook.com.br</a></p>
+            </div>
+            <hr class="my-3">
+            <!-- Direitos Autorais -->
+            <div id="direitos-autorais">
+                <p>&copy; 2025 MiniMercado Popular. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://github.com/paivaluiz">Luiz Carlos de Paiva Júnior</a></p>
+            </div>
         </div>
     </footer> <!-- Fim do Rodapé -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

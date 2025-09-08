@@ -1,0 +1,59 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Carrossel */
+.carousel-image {
+    height: 400px; /* Define uma altura fixa para todas as imagens do carrossel */
+    width: 100%;   /* Garante que a imagem ocupe toda a largura do carrossel */
+    object-fit: cover; /* Faz a imagem cobrir a área sem distorcer, cortando o excesso se necessário */
+}
+
+/* Altera a cor da seta 'Anterior' (<) do carrossel para preto */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+/* Altera a cor da seta 'Próximo' (>) do carrossel para preto */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Produtos */
+.product-image {
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #6c757d; /* cinza do bootstrap */
+    font-size: 0.9em;
+}
+
+.preco-novo {
+    font-weight: bold;
+    color: #28a745; /* verde do bootstrap */
+    font-size: 1.2em;
+}
+
+/* Rodapé */
+footer a {
+    color: #ffffff; /* links brancos no rodapé escuro */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
